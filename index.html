@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Activity 4</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+</head>
+<body>
+	<header class="container-fluid p-3 alert-secondary">
+		<h4>Activity 5: Query Activity #5 (Product Shop)</h4>
+		<p>Created by: Lastname, Firstname Middlename</p>
+
+	</header>
+	
+    <section class="container-fluid"> 
+        <br>
+        <!-- Card -->
+        <div class="float-left w-75">
+            <div class="row">
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage1" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname1">Strawburr</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice1">150.00</label>
+                            <label id="fruitunit1" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="1">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage2" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname2">MEKUS FRUIT</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice2">140.00</label>
+                            <label id="fruitunit2" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="2">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage3" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname3">XD FRUIT</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice3">140.00</label>
+                            <label id="fruitunit3" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="3">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage4" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname4">LOL FRUIT</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice4">140.00</label>
+                            <label id="fruitunit4" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="4">Select</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- TOTAL CART -->
+        <div class="float-left w-25">
+            <div class="card m-1 h-100 bg-info">
+                <div class="card-header">
+                    <h5 class="card-title text-white fa fa-shopping-cart">...Cart</h5>
+                </div>
+                <div class="h-75 d-flex">
+                    <img id="fruitimage" class="img-fluid card-img" src="" alt="" style="margin:auto; height: 150px; width: 100px;">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" id="fruitname"></h4>
+                    <p class="card-text" id="fruitprice"></p>
+                    <div id="tohide">
+                        <p class="card-text" id="fruitprice"></p>
+                        <input type="number" min="1" id="quantity" value="1"><span class="card-text" id="fruitunit"></span>
+                        <input type="hidden" id="price">
+                        <br><br>
+                        <a href="#" class="btn btn-danger">Buy</a>
+                        <span class="text-xl text-white">Total: <label id="total"></label></span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2-->
+        <div class="float-left w-75">
+            <div class="row">
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage5" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname5">COCObuks</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice5">151.00</label>
+                            <label id="fruitunit5" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="5">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage6" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname6">Lemonade </h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice6">142.00</label>
+                            <label id="fruitunit6" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="6">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage3" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname7">Coffee</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice7">141.00</label>
+                            <label id="fruitunit7" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="7">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage8" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname8">Shanne FRUIT</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice8">141.00</label>
+                            <label id="fruitunit8" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="8">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage9" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname9">DL FRUIT</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice9">161.00</label>
+                            <label id="fruitunit9" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="9">Select</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3">
+                    <div class="card h-100">
+                        <div class="h-70 d-flex">
+                            <img id="fruitimage10" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
+                        </div>
+                        <div class="card-body">
+                            <h4 id="fruitname10">Jeriel FRUIT</h4>
+                            <p class="card-text"><label>Php. </label><label id="fruitprice10">171.00</label>
+                            <label id="fruitunit10" name="piece"></label></p>
+                            <a href="#" class="btn btn-primary addtocart" id="10">Select</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+	<footer class="container p-3 text-center w-100">
+		<div class="float-left w-100">
+			<hr/>
+			<p>Submitted to: Lastname, Firstname MI.</p>
+			<small>Instructor</small>
+		</div>
+	</footer>
+	<script type="text/javascript">
+        $(document).ready(function(){
+          $("#tohide").hide();
+      
+          $(".addtocart").click(function(){
+            var num = $(this).attr("id");
+            var unit = $("#fruitunit"+num).text();
+            var image = $("#fruitimage"+num).attr("src");
+            
+            $("#fruitname").text($("#fruitname"+num).text());
+            $("#fruitprice").text("Php "+$("#fruitprice"+num).text()+" "+unit);
+            $("#fruitimage").attr('src',image);
+      
+            $("#quantity").change(function(){
+              var quantity = $(this).val();
+              var price = parseFloat($("#fruitprice"+num).text());
+              var total = quantity * price;
+              $("#total").text("Total: Php " + total.toFixed(2));
+            });
+      
+            $("#tohide").show();
+          });
+        });
+      </script>
+      
+
+</body>
+</html>
