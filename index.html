@@ -1,227 +1,362 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Activity 4</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <title>Activity 4</title>
 
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
-	<header class="container-fluid p-3 alert-secondary">
-		<h4>Activity 5: Query Activity #5 (Product Shop)</h4>
-		<p>Created by: Lastname, Firstname Middlename</p>
-
-	</header>
-	
-    <section class="container-fluid"> 
-        <br>
-        <!-- Card -->
-        <div class="float-left w-75">
-            <div class="row">
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage1" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname1">Strawburr</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice1">150.00</label>
-                            <label id="fruitunit1" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="1">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage2" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname2">MEKUS FRUIT</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice2">140.00</label>
-                            <label id="fruitunit2" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="2">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage3" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname3">XD FRUIT</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice3">140.00</label>
-                            <label id="fruitunit3" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="3">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage4" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname4">LOL FRUIT</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice4">140.00</label>
-                            <label id="fruitunit4" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="4">Select</a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-
-        <!-- TOTAL CART -->
-        <div class="float-left w-25">
-            <div class="card m-1 h-100 bg-info">
-                <div class="card-header">
-                    <h5 class="card-title text-white fa fa-shopping-cart">...Cart</h5>
-                </div>
-                <div class="h-75 d-flex">
-                    <img id="fruitimage" class="img-fluid card-img" src="" alt="" style="margin:auto; height: 150px; width: 100px;">
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title" id="fruitname"></h4>
-                    <p class="card-text" id="fruitprice"></p>
-                    <div id="tohide">
-                        <p class="card-text" id="fruitprice"></p>
-                        <input type="number" min="1" id="quantity" value="1"><span class="card-text" id="fruitunit"></span>
-                        <input type="hidden" id="price">
-                        <br><br>
-                        <a href="#" class="btn btn-danger">Buy</a>
-                        <span class="text-xl text-white">Total: <label id="total"></label></span> 
-                    </div>
-                </div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="">
+    <nav
+      class="navbar navbar-expand-lg shadow-lg"
+      style="background-color: #006341"
+    >
+      <div
+        class="container-sm d-flex justify-content-between"
+        style="width: 100%"
+      >
+        <div
+          class="d-flex justify-content-between align-items-center"
+          style="width: 100vw"
+        >
+          <div>
+            <img src="./img/logo.png" alt="" style="width: 100px" />
+          </div>
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+            >
+              <i class="fa-solid fa-mug-hot" style="color: white"></i>
+            </button>
+          </div>
         </div>
 
-        <!-- Card 2-->
-        <div class="float-left w-75">
-            <div class="row">
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage5" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname5">COCObuks</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice5">151.00</label>
-                            <label id="fruitunit5" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="5">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage6" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname6">Lemonade </h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice6">142.00</label>
-                            <label id="fruitunit6" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="6">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage3" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname7">Coffee</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice7">141.00</label>
-                            <label id="fruitunit7" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="7">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage8" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname8">Shanne FRUIT</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice8">141.00</label>
-                            <label id="fruitunit8" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="8">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage9" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname9">DL FRUIT</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice9">161.00</label>
-                            <label id="fruitunit9" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="9">Select</a> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3">
-                    <div class="card h-100">
-                        <div class="h-70 d-flex">
-                            <img id="fruitimage10" class="img-fluid card-img" src="img3.png" alt="cup1 style="margin:auto;">
-                        </div>
-                        <div class="card-body">
-                            <h4 id="fruitname10">Jeriel FRUIT</h4>
-                            <p class="card-text"><label>Php. </label><label id="fruitprice10">171.00</label>
-                            <label id="fruitunit10" name="piece"></label></p>
-                            <a href="#" class="btn btn-primary addtocart" id="10">Select</a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div
+          class="collapse navbar-collapse container-fluid"
+          id="navbarSupportedContent"
+          style="width: 30vw"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white fw-lighter"
+                aria-current="page"
+                href="#"
+                > Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-lighter" href="#"
+                >Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-lighter" href="#"> More</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
+    <!--Banner-->
+    <div>
+      <div class="position-relative">
+        <img
+          src="./img/banner.jpg"
+          class="w-100 img-fluid"
+          style="
+            height: 50vh;
+            object-fit: cover;
+            filter: blur(2px);
+            filter: saturate(2);
+          "
+        />
+        <section
+          class="position-absolute top-50 start-50 translate-middle text-center text-white"
+        >
+          <h1 class="text-white h1">Starbucks</h1>
+          <p class="lead fst-italic h4">
+            <i class="fa-solid fa-quote-left"></i> Find Your Perfect Sip at
+            Starbucks!
+          </p>
+          <button
+            class="btn text-white shadow"
+            style="background-color: #006341"
+          >
+            <i class="fa-solid fa-mug-hot"></i> Order Now
+          </button>
+        </section>
+      </div>
+    </div>
+
+    <hr class="container-sm Sborder border-success mt-5 border-2 opacity-50" />
+
+    <!--Hero-->
+    <section class="container-sm">
+      <div class="d-flex flex-column align-items-center text-center">
+        <img
+          src="./img/hero.png"
+          style="width: 200px; height: 45px"
+          alt=""
+          class="mt-5 mb-3 img-fluid"
+          srcset=""
+        />
+        <p class="w-75 lead text-secondary fst-italic">
+          Starbucks is more than just a coffee shop; it's a community hub where
+          people connect over delicious drinks and meaningful moments. With our
+          expertly crafted coffees, teas, and snacks, every visit is an
+          opportunity to treat yourself to quality and comfort. From our iconic
+          lattes to seasonal favorites, there's something for every palate. Join
+          us at Starbucks and let's make every sip count.
+        </p>
+      </div>
     </section>
 
-	<footer class="container p-3 text-center w-100">
-		<div class="float-left w-100">
-			<hr/>
-			<p>Submitted to: Lastname, Firstname MI.</p>
-			<small>Instructor</small>
-		</div>
-	</footer>
-	<script type="text/javascript">
-        $(document).ready(function(){
-          $("#tohide").hide();
-      
-          $(".addtocart").click(function(){
-            var num = $(this).attr("id");
-            var unit = $("#fruitunit"+num).text();
-            var image = $("#fruitimage"+num).attr("src");
-            
-            $("#fruitname").text($("#fruitname"+num).text());
-            $("#fruitprice").text("Php "+$("#fruitprice"+num).text()+" "+unit);
-            $("#fruitimage").attr('src',image);
-      
-            $("#quantity").change(function(){
-              var quantity = $(this).val();
-              var price = parseFloat($("#fruitprice"+num).text());
-              var total = quantity * price;
-              $("#total").text("Total: Php " + total.toFixed(2));
-            });
-      
-            $("#tohide").show();
-          });
-        });
-      </script>
-      
+    <hr class="container-sm Sborder border-success mt-5 border-2 opacity-50" />
 
-</body>
+    <section class="">
+      <div class="container-sm">
+        <div
+          class="d-flex gap-3 overflow-x-scroll w-100"
+          id="displayProducts"
+        ></div>
+      </div>
+    </section>
+
+    <div class="modal" tabindex="-1" id="modalProduct">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="fruitname"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="" id="fruitimage" alt="" />
+            <hr class="border-success border-2"/>
+            <h4 class="card-title" id="fruitname"></h4>
+            <p class="card-text" id="fruitdetail"></p>
+            <p class="card-text" id="fruitprice"></p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-warning" id="decrement">-</button>
+              <input class="form-control w-25 text-center text-secondary" id="quantity" value="0"></p>
+              <button class="btn btn-warning" id="increment">+</button>
+            </div>
+          
+              <div class="d-flex align-items-center mt-3">Total:
+                <input class="form-control border-0 bg-transparent text-secondary" id="total"/>
+              </div>
+           
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="close"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn text-white"
+              style="background-color: #006341"
+              id="buy"
+              data-bs-dismiss="modal"
+            >
+              Buy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-5 text-white p-3" style="background-color: #006341;">
+      
+      <div class="container-sm d-flex justify-content-between align-items-center">
+        <div class="">
+          <h4>AI Tech</h4>
+          <ul>
+            <li>Shanne Cabotaje</li>
+            <li>Dran Leynard Gamoso</li>
+            <li>Mark Jeriel Cabalbag</li>
+            <li>Ruvic Bacton</li>
+            <li>Cyrell Corrales</li>
+          </ul>
+        </div>
+        <div class="">
+          <div><img src="./img/top.png" style="width: 50px; height: 50px;" alt=""></div>
+         <div><p class="fst-bold">&copy; 2024; Bebekels</p></div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        const displayProducts = $("#displayProducts");
+        const products = [
+          {
+            id: 1,
+            productPicture: "./img/1.png",
+            productName: "Mocha Madness Blend",
+            productDetail:
+              "Dive into the rich flavors of chocolate and espresso with our Mocha Madness Blend. Perfectly balanced and irresistibly smooth.",
+            productPrice: 200.58,
+          },
+          {
+            id: 2,
+            productPicture: "./img/2.png",
+            productName: "Caramel Dream Latte",
+            productDetail:
+              "Indulge in the velvety sweetness of caramel combined with our signature espresso, topped with steamed milk. A dreamy delight.",
+            productPrice: 140.48,
+          },
+          {
+            id: 3,
+            productPicture: "./img/3.png",
+            productName: "Matcha Zen Frappuccino",
+            productDetail:
+              "Discover inner peace with our Matcha Zen Frappuccino. A harmonious blend of matcha green tea, creamy milk, and a hint of sweetness.",
+            productPrice: 340.58,
+          },
+          {
+            id: 4,
+            productPicture: "./img/4.png",
+            productName: "Vanilla Bean Macchiato",
+            productDetail:
+              "Experience pure bliss with our Vanilla Bean Macchiato. Smooth vanilla meets bold espresso, topped with a dollop of foam.",
+            productPrice: 230.87,
+          },
+          {
+            id: 5,
+            productPicture: "./img/5.png",
+            productName: "Berry Blast Smoothie",
+            productDetail:
+              "Refresh your day with our Berry Blast Smoothie. A burst of strawberries, blueberries, and raspberries blended with yogurt and ice.",
+            productPrice: 201.8,
+          },
+          {
+            id: 6,
+            productPicture: "./img/6.png",
+            productName: "Cinnamon Swirl Pastry",
+            productDetail:
+              "Fall in love with our Cinnamon Swirl Pastry. Layers of flaky dough with cinnamon filling, baked to perfection.",
+            productPrice: 120.9,
+          },
+          {
+            id: 7,
+            productPicture: "./img/7.png",
+            productName: "Java Chip Frappuccino",
+            productDetail:
+              "Get your chocolate fix with our Java Chip Frappuccino. Rich coffee blended with chocolate chips and topped with whipped cream.",
+            productPrice: 70.58,
+          },
+          {
+            id: 8,
+            productPicture: "./img/8.png",
+            productName: "Roasted Hazelnut Coffee",
+            productDetail:
+              "Embrace the nutty aroma of our Roasted Hazelnut Coffee. A medium-bodied brew with hints of roasted hazelnuts.",
+            productPrice: 290.18,
+          },
+          {
+            id: 9,
+            productPicture: "./img/9.png",
+            productName: "Iced Peach Green Tea",
+            productDetail:
+              "Chill out with our Iced Peach Green Tea. Refreshing green tea infused with juicy peach flavors and served over ice.",
+            productPrice: 231.56,
+          },
+          {
+            id: 10,
+            productPicture: "./img/10.png",
+            productName: "Classic Chocolate Chip Cookie",
+            productDetail:
+              "Treat yourself to our Classic Chocolate Chip Cookie. Crisp on the edges, chewy in the middle, and loaded with chocolate chips.",
+            productPrice: 321.88,
+          },
+        ];
+
+        const productCards = products.map((starbucks) => {
+          return `
+            <div key="${starbucks.id}" class="card p-3 col-12 col-md-6 col-lg-4">
+                <div>
+                    <img src="${starbucks.productPicture}" style="width: 200px; height: 200px; object-fit: cover; filter: drop-shadow(5px 5px 15px #006341)"/>
+                </div>
+                <hr class="border-success border-2"/>
+                <div>
+                    <h4 class="card-title" id="fruitname">${starbucks.productName}</h4>
+                    <p class="card-text text-secondary" id="fruitdetail">${starbucks.productDetail}</p>
+                    <p class="card-text text-secondary" id="fruitprice"><i class="fa-solid fa-peso-sign"></i> ${starbucks.productPrice}</p>
+                    <button class="btn text-white addtocart" style="background-color: #006341" data-bs-toggle="modal" data-bs-target="#modalProduct"
+                    data-product-id="${starbucks.id}" data-product-name="${starbucks.productName}"
+                    data-product-image="${starbucks.productPicture}" data-product-price="${starbucks.productPrice}" data-product-detail="${starbucks.productDetail}">Select</button>
+                </div>
+            </div>
+        `;
+        });
+
+        displayProducts.append(productCards);
+        $('#total').hide()
+        $(".addtocart").click(function () {
+          var productId = $(this).data("product-id");
+          var productName = $(this).data("product-name");
+          var productImage = $(this).data("product-image");
+          var productDetail = $(this).data("product-detail");
+          var productPrice = $(this).data("product-price");
+
+          $("#modalProduct #fruitname").text(productName);
+          $("#modalProduct #fruitprice").text("Php " + productPrice);
+          $("#modalProduct #fruitdetail").text(productDetail);
+          $("#modalProduct #fruitimage").attr("src", productImage);
+
+          $("#increment").click(function () {
+          let quantity = parseInt($("#quantity").val());
+          let parsePrice = parseInt($('#quantity').val(quantity += 1))
+          $('#total').show()
+          parseInt($('#total').val( productPrice * (quantity += 0)))
+        });
+
+        $("#decrement").click(function () {
+          let quantity = parseInt($("#quantity").val());
+          let parsePrice = parseInt($('#quantity').val(quantity -= 1))
+          $('#total').show()
+          parseInt($('#total').val( productPrice * (quantity -= 0)))
+        });
+
+        $('#close').click(function(){
+          parseInt($('#quantity').val(quantity = 0))
+          $('#total').hide()
+        })
+
+        $('#buy').click(function(){
+          parseInt($('#quantity').val(quantity = 0))
+          $('#total').hide()
+          
+        })
+        
+        });
+
+     
+      });
+    </script>
+  </body>
 </html>
